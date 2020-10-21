@@ -23,7 +23,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
+---------
 Application URL:
 https://artis026.github.io/VueJs-ResizableEditor/dist/
 =======
