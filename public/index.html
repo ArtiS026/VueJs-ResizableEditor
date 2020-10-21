@@ -5,13 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+	<script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/marked@0.3.6"></script>
+    <script src="https://unpkg.com/lodash@4.16.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
     <title><%= htmlWebpackPlugin.options.title %></title>
+	<style>
+		#wrapper
+        {
+			border:solid 1px #ccc;
+			padding: 20px;
+			min-height:200px;
+			float: left;
+			display: flex;
+			resize: vertical; overflow: auto
+        }
+		
+		#editor{
+		display: inline-block;
+		}
+		#tutorial
+		{
+		vertical-align: right;
+		display:inline-block; height:100%; vertical-align:middle;width:50%;
+		float: left; 
+        background-color:#F8F8FF;
+		resize: both; overflow: auto
+		}
+		
+		#maintutorial{
+		width: 50%;
+		float: right; 
+		}
+
+        .toolbar
+        {
+			border:solid 1px #ddd;
+			background:#f4f4f4;
+			padding: 5px;
+			border-radius:3px;
+			resize:vertical;
+			overflow:auto;
+        }
+
+        .toolbar > span
+        {
+			cursor:pointer;
+		}
+
+        .toolbar > span:hover
+        {
+			text-decoration:underline;
+		}
+		
+		
+		.close {
+			cursor: pointer;
+			position: absolute;
+			padding: 8px 10x;
+			transform: translate(0%, -50%);
+			}
+
+	.close:hover {background: #bbb;}
+		
+	</style>
+	
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+	<div class="toolbar">
+		<button onclick="showdiveditor()">Editor</button>
+		<button onclick="showdivtutorail()">Tutorial</button>
+</div>
+
+	 <div id="wrapper">
+    <div id="editor">  <textarea  :value="input" @input="update" rows="12" cols="20">
+	  </textarea> <span class="close">&times;</span></div>
+	  <div id="maintutorial">
+      <div id="tutorial" v-html="compiledMarkdown">
+	  </div> <span class="close">&times;</span></div>
+    </div> 
+	<script>
+      new Vue({
+        el: "#wrapper",
+        data: {
+          input: "# import react,{component} from 'react'; import {render} from 'react -dom'; import Hello from './Hello' ",
+		  			
+        },
+        computed: {
+          compiledMarkdown: function() {
+            return marked("class App extends component {constructor(){} super();}");
+          }
+        },
+		 
+      });
+	  
+	  var closebtns = document.getElementsByClassName("close");
+var i;
+
+for (i = 0; i < closebtns.length; i++) {
+  closebtns[i].addEventListener("click", function() {
+    this.parentElement.style.display = 'none';
+  });
+}
+
+function showdiveditor() {
+  var editordiv = document.getElementById("editor");
+  if (editordiv.style.display == "none") {
+    editordiv.style.display = "block";
+  }
+}
+
+function showdivtutorail() {
+  var tutoraildiv=document.getElementById("maintutorial");
+  if (tutoraildiv.style.display == "none") {
+    tutoraildiv.style.display = "block";
+  }
+}
+    </script>
+	
   </body>
 </html>
