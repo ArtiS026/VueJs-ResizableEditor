@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+# editor-vueapp
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
 # VueJs-ResizableEditor
 Make a simple editor based on Monaco editor and Vue.js. The editor should have 3 panes . The panes should be possible to change in size and the content should adapt in size. The editor and tutorial panes should be possible to open (button on top menu) and close (x in top right corner).
 The text in the tutorial area should be possible to drag and drop into the editor area at any place.
@@ -21,3 +47,4 @@ Install Vue Cli Generic badge
 Install Vue Cli Node Package Globally using the following Command.
 
 npm install -g @vue/cli
+>>>>>>> 0f99633b7cadcd251e289be8dbd5e42f0bb16709
