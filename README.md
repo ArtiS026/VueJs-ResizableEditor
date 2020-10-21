@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # editor-vueapp
 
 ## Project setup
@@ -47,4 +47,4 @@ Install Vue Cli Generic badge
 Install Vue Cli Node Package Globally using the following Command.
 
 npm install -g @vue/cli
->>>>>>> 0f99633b7cadcd251e289be8dbd5e42f0bb16709
+

@@ -1,3 +1,4 @@
+
 language: node_js
 node_js:
  - "node"
@@ -12,4 +13,4 @@ deploy:
  github_token: 828022d37ddd3778247698c29ee3522f73178fdd
  local_dir: dist
  on:
-   branch: master
+branch: master
