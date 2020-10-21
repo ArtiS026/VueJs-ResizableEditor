@@ -37,7 +37,7 @@ https://microsoft.github.io/monaco-editor/playground.html
 https://github.com/microsoft/monaco-editor-samples
 
 Application URL:
-
+https://artis026.github.io/VueJs-ResizableEditor/
 
 Prerequisites
 Install NodeJS Generic badge
