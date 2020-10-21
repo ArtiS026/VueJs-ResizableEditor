@@ -23,6 +23,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Application URL:
+https://artis026.github.io/VueJs-ResizableEditor/dist/
 =======
 # VueJs-ResizableEditor
 Make a simple editor based on Monaco editor and Vue.js. The editor should have 3 panes . The panes should be possible to change in size and the content should adapt in size. The editor and tutorial panes should be possible to open (button on top menu) and close (x in top right corner).
@@ -37,7 +40,7 @@ https://microsoft.github.io/monaco-editor/playground.html
 https://github.com/microsoft/monaco-editor-samples
 
 Application URL:
-
+https://artis026.github.io/VueJs-ResizableEditor/dist/
 
 Prerequisites
 Install NodeJS Generic badge
